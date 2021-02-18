@@ -1,0 +1,80 @@
+body{
+    padding: 0;
+    margin: 0;
+   
+}
+.navbar{
+    background-color: rgb(58, 137, 228);
+    padding: 3px;
+    padding-left: 28px;
+    position: fixed;
+    z-index: 3000;
+    width: 100%;
+}
+.nt{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+}
+.nt1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    height: 900px;
+    position: relative;
+    top:80px;
+    padding: 0;
+    border: 2px solid rgb(115, 187, 255);
+
+    box-shadow: 0px 0px 10px 5px rgba(139, 193, 255, 0.877);
+}
+.g{
+    list-style:none;
+    display: flex;
+    border-bottom: 3px solid rgb(58, 137, 228);
+}
+.dat{
+    width:auto;
+    
+    float:right;
+    padding: 20px;
+}
+.dat ul li{
+    list-style: none;
+    line-height: normal;
+    font-family:  'Raleway', sans-serif;
+    font-weight: bold;
+    
+    display: block;
+}
+.h1{
+    background-color:transparent ;
+    width: 100%;
+    
+    margin-top: 20px;
+    color: rgb(58, 137, 228);
+    padding: 5px;
+}
+.h2{
+    background-color: chocolate;
+    height: 900px;
+}
+.bill{
+    font-size: 25px;
+}
+.billr{
+    margin-top: 20px;
+}
+.ba{
+   position: relative;
+   left: 40px;
+}
+.bt{
+    position: relative;
+    left: 20px;
+}

@@ -1,0 +1,25 @@
+ var p1=parseInt(noofro);
+    let sq4=`SELECT id FROM pad1 WHERE fname is NULL LIMIT ${p1}`;
+           db.query(sq4,(err,rows,res)=>{
+            if(err)throw err;
+            for(var i=0;i<rows.length;i++){
+                arr.push(rows[i].id);
+            }
+            console.log(arr);
+           });
+        let sq=`UPDATE pad1 SET ? WHERE roomType='${roomty}' AND type='${acorn}' AND fname is NULL LIMIT ${p1}`;
+        let po={
+            fname:fn,
+            lname:ln,
+            pid:pi,
+            mobile:mo,
+            Gmail:gm,
+            checkIn:checkin,
+            checkOut:checkout,
+            report:rec
+        };
+        db.query(sq,po,(err,res)=>
+        {
+            if(err)throw err;
+            console.log("data inserted successfully");
+        });

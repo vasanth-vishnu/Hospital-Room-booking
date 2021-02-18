@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Raleway:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="in5.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+          <table>
+            <tr>
+              <td>
+                <div class="divl"><img src="newlo.png" width="40px" height="38px"></div>
+              </td>
+              <td>
+                <div class="divt nt">Homels</div>
+              </td>
+            </tr>
+          </table>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nt1 nav-link" href="/home"  style="color: white;">Home</a>
+            </li>
+           
+          
+           
+          </ul>
+        </div>
+      </nav>
+      
+    <div class="container">
+      <a href="show" class="btn btn-primary btn-hover tb1" style="text-decoration: none; color:white; font-weight: bold;">Back</a>
+      <br><br>
+      <div class="rm">
+        <h5 style="color: white; background-color:  rgb(58, 137, 228); padding-top:3px; padding-bottom: 5px;">Update Patient Details</h5>
+        <div class="rminp">
+          <form action="">
+            <div class="row">
+              <div class="ccol col-lg-3 col-lg-3">
+                <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Patient name</label>
+                <input type="text" id="an" name="aname" value="<%= up[0].lname %>" placeholder="enter your name">
+              </div>
+              <div class="ccol col-lg-3 col-lg-3">
+                <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Mobile</label>
+                <input type="text" id="an" name="aname" value="<%= up[0].mobile %>" placeholder="enter your name">
+              </div>
+              <div class="ccol col-lg-3 col-lg-3 v1">
+                <label for="x6"  style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Roomtype</label>
+              <select id="x6"  value="<%= up[0].roomType %>" name="usr">
+                <option selected><%= up[0].roomType %></option>
+                <% for(var i=0;i<tr.length;i++) { %>
+                <option><%= tr[i].Roomtype %></option>
+                <% } %>
+              </select>
+              </div>
+              <div class="ccol col-lg-3 col-lg-3 v1">
+                <label for="x6"  style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Select-AC/NAC</label>
+              <select id="x6" name="usr">
+                <option selected><%= up[0].type %></option>
+                <option>AC</option>
+                <option>NON-AC</option>
+              </select>
+              </div>
+              <div class="ccol col-lg-3 col-lg-3">
+                <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">check In Date</label>
+                <input type="date" id="an" name="aname"  value="<%= up[0].checkIn %>" placeholder="enter your name">
+              </div>
+              <div class="ccol col-lg-3 col-lg-3">
+                <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Check Out Date</label>
+                <input type="date" id="an" name="aname" placeholder="enter your name">
+              </div>
+              <div class="ccol col-lg-3 col-lg-3">
+                <label for="ap" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Set Price</label>
+                <input type="password" name="apass" id="ap" placeholder="Change your password">
+              </div>
+              <div class="ccol col-lg-3 col-lg-3">
+                <button type="submit" class="btn btn-primary btn-sm btn-hover" style="font-weight: bold;">Update</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+      <div class="rm">
+        <h5 style="color: white; background-color:  rgb(58, 137, 228); padding-top:3px; padding-bottom: 5px;">Update all Rooms Booked under <%= up[0].lname %></h5>
+        <div class="rminp">
+          <form action="">
+            <div class="row">
+              <div class="ccol col-lg-3 col-lg-3">
+                <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Patient name</label>
+                <input type="text" id="an" name="aname" value="<%= up[0].lname %>" placeholder="enter your name">
+              </div>
+              <div class="ccol col-lg-3 col-lg-3">
+                <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">check In Date</label>
+                <input type="date" id="an" name="aname"  value="<%= up[0].checkIn %>" placeholder="enter your name">
+              </div>
+              <div class="ccol col-lg-3 col-lg-3">
+                <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Check Out Date</label>
+                <input type="date" id="an" name="aname" placeholder="enter your name">
+              </div>
+              <div class="ccol col-lg-3 col-lg-3">
+                <button type="submit" class="btn btn-primary btn-sm btn-hover" style="font-weight: bold;">Update</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br><br>
+      <h5 style="font-weight: bold; color: rgb(255, 111, 106);">Previously Updated Values</h5>
+        <table class="table table-hover table-blue">
+            <thead class="table-info">
+                <tr>
+                    <th>Name</th>
+                    <th>mobile</th>
+                    <th>Patient-Id</th>
+                    <th>Roomtype</th>
+                    <th>Type</th>
+                    <th>Rooms number</th>
+                    <th>Check in date</th>
+                    <th>Check out date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="table-stripped ">
+                <% item.forEach(function(item){ %>
+                    <tr>
+                        <td><%= item.lname %></td>
+                        <td><%= item.mobile %></td>
+                        <td><%= item.pid %></td>
+                        <td><%= item.roomType %></td>
+                        <td><%= item.type %></td>
+                        <td><%= item.roomnum %></td>            
+                        <td><%= item.checkIn %></td>
+                        <td><%= item.checkOut %></td>
+                        <td>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                            <a href="/delete/<%= item.roomnum %>" class="btn btn-sm btn-danger">Cancel</a>
+                        </td>                                                   
+                    </tr>
+                    
+                <% }); %>
+            </tbody>         
+        </table>
+    </div>
+   
+</body>
+</html>
+
+

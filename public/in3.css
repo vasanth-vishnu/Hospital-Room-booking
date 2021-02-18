@@ -1,0 +1,123 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background:url('blu.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.b2{
+ background:url('blu.jpg');
+background-position:center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 650px;
+}
+.navbar{
+    background-color: rgb(58, 137, 228);
+    padding: 3px;
+    padding-left: 28px;
+    position: fixed;
+    z-index: 3000;
+    width: 100%;
+}
+.nt{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+}
+.nt1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+.container{
+    background: linear-gradient(90deg,rgba(132, 187, 255, 0.801) 0%,  rgb(139, 193, 255) 42%,  rgba(89, 166, 255, 0.747) 100%);
+    height: 600px;
+    position: relative;
+    top:56px;
+    overflow:scroll;
+    
+}
+input,label{
+    display: block;
+}
+.rm{
+    background-color: white;
+    height: 150px;
+}
+.rm1{
+    background-color: white;
+    padding-bottom: 10px;
+}
+.container1{
+    padding: 10px;
+}
+.rm2{
+    height: 200px;
+    background-color: white; 
+}
+.sb1{
+    position: relative;
+    top:15px;
+    left:850px;
+}
+.row{
+   padding-left: 25px;
+}
+input{
+    width: 200px;
+    background-color: transparent;
+    color: rgb(10, 73, 146);
+    border: none;
+    border-bottom: 2px solid rgb(58, 137, 228);
+    outline: none;
+}
+select{
+    width: 200px;
+    background-color: transparent;
+    color: rgb(10, 73, 146);
+    border: none;
+    border-bottom: 2px solid rgb(58, 137, 228);
+    outline: none;
+}
+::-webkit-input-placeholder{
+    opacity: 0.2;
+    font-weight: bolder;
+}
+.sb{
+    border: none;
+    background-color: rgb(58, 137, 228) ;
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+}
+.tb{
+    height: 70px;
+  
+
+}
+.alrt{
+    background-color: rgba(5, 186, 199, 0.747);
+    border: 2px solid rgb(0, 109, 128);
+    border-radius: 30px;
+    padding: 5px;
+   
+    height: 40px;
+    float: right;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: block;
+  
+    
+}
+.back{
+    float: right;
+}
+

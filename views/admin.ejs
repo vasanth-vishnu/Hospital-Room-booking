@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Raleway:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="in3.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">
+      <table>
+        <tr>
+          <td>
+            <div class="divl"><img src="newlo.png" width="40px" height="38px"></div>
+          </td>
+          <td>
+            <div class="divt nt">Homels</div>
+          </td>
+        </tr>
+      </table>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          <div class="alrt" style="width: 400px;"><p><%= alrt %></p></div>
+        </li>
+        <li class="nav-item">
+          <a class="nt1 nav-link" href="/home"  style="color: white;">Home</a>
+        </li>
+       
+      
+       
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h4 style="color: white;"> Admin Details</h4>
+    <div class="tb">
+      <a href="hospital-room-booking" class="btn btn-primary btn-hover tb1" style="text-decoration: none; color:white; font-weight: bold;">Bookroom for patient</a>
+      <a href="/show" class="btn btn-primary btn-hover tb1" style="text-decoration: none; color:white; font-weight: bold;">Patients Booked</a>
+      <div class="back"><a href="/admin-page1" class="btn btn-primary btn-hover tb1" style="text-decoration: none; color:white; font-weight: bold;">Admin page</a></div>
+    </div>
+    <div class="rm">
+      <h5 style="color: white; background-color:  rgb(58, 137, 228); padding-top:3px; padding-bottom: 5px;">Change login credentials</h5>
+      <div class="rminp">
+        <form action="/admin-page2" method="POST">
+          <div class="row">
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Name</label>
+              <input type="text" id="an" name="aname" placeholder="enter your name">
+            </div>
+            <div class="ccol col-lg-3 col-lg-3 v1">
+              <label for="ap" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Change password</label>
+              <input type="password" name="apass" id="ap" placeholder="Change your password">
+            </div>
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="ap" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Confirm password</label>
+              <input type="password" name="acpass"  id="ap" placeholder="Change your password">
+            </div>
+            <div class="ccol col-lg-3 col-lg-3">
+              <button type="submit" class="btn btn-primary btn-sm btn-hover" onclick="vas()" style="font-weight: bold;">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+<br>
+<div class="rm1">
+  
+
+  <h5 style="color: white; background-color:  rgb(58, 137, 228); padding-top:3px; padding-bottom: 5px;">Room Varients</h5>
+
+
+  <div class="container1" id="di" style="display: block;">
+    <table class="table table-stripped">
+    <thead class="table-primary">
+      <tr>
+        <td>RoomType</td>
+        <td>AC/N-AC</td>
+        <td>No of Rooms</td>
+        <td>Room number</td>
+        <td>price</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0;i<tab.length;i++) { %>
+      <tr>
+        <td><%= tab[i].Roomtype %></td>
+        <td><%= tab[i].Type %></td>
+        <td><%= tab[i].Rooms %></td>
+        <td><%= tab[i].Roomnumber %> to <%= tab[i].Roomnumber+tab[i].Rooms-1 %> </td>
+        <td><%= tab[i].Price %></td>
+         <td>  <a href="/del/<%= tab[i].id %>/<%= tab[i].Roomtype %>" class="btn btn-sm btn-danger">Remove</a></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="rm1" style="margin-top: 20px;">
+     
+      <h5 style="color: white; background-color:  rgb(58, 137, 228); padding-top:3px; padding-bottom: 5px;">Room Varient Selection</h5>
+      <div class="rminp">
+        <br>
+        <form action="/admin-add" method="POST">
+          <div class="row">
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">RoomType</label>
+              <input type="text" id="an" name="artype" placeholder="enter your name">
+            </div>
+            <div class="ccol col-lg-3 col-lg-3 v1">
+              <label for="x6"  style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Select-AC/NAC</label>
+            <select id="x6" name="aac">
+              <option selected>AC</option>
+              <option>NON-AC</option>
+            </select>
+            </div>
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="ap" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">No of Rooms</label>
+              <input type="number" name="anor" id="ap" placeholder="Change your password">
+            </div>
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="ap" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Starting Room no</label>
+              <input type="number" name="armno" id="ap" placeholder="Change your password">
+              <button type="submit" class="btn btn-primary btn-sm btn-hover" style="font-weight: bold; margin-top: 20px;">Submit</button>
+            </div>
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="ap" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Set Price</label>
+              <input type="number" name="aprice" id="ap" placeholder="Change your password">
+              
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+    <br>
+    <div class="rm1">
+      <h5 style="color: white; background-color:  rgb(58, 137, 228); padding-top:3px; padding-bottom: 5px;">Update Rooms Details</h5>
+      <div class="rminp">
+        <form action="/admin-update" method="POST">
+          <div class="row">
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="x6"  style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Roomtype</label>
+              <select id="x6" name="updrt">
+                <option selected>choose...</option>
+                <% for(let i=0;i<rt.length;i++) { %>
+                <option><%= rt[i].Roomtype %></option>
+                <% } %>
+              </select>
+            </div>
+            <div class="ccol col-lg-3 col-lg-3 v1">
+              <label for="x6"  style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Select-AC/NAC</label>
+            <select id="x6" name="updac">
+              <option selected>AC</option>
+              <option>NON-AC</option>
+            </select>
+            </div>
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="ap" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;"> Update No of Rooms</label>
+              <input type="text" name="updno" id="ap" placeholder="Change your password">
+            </div>
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="ap" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Update Price</label>
+              <input type="password" name="updpr" id="ap" placeholder="Change your password">
+              <button type="submit" class="btn btn-primary btn-sm btn-hover" style="font-weight: bold; margin-top: 20px;">Update</button>
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+    <br>
+    <div class="rm">
+      <h5 style="color: white; background-color:  rgb(58, 137, 228); padding-top:3px; padding-bottom: 5px;">Extend stay</h5>
+      <div class="rminp">
+        <form action="">
+          <div class="row">
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="an" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Patient name</label>
+              <input type="text" id="an" name="aname" placeholder="enter your name">
+            </div>
+            <div class="ccol col-lg-3 col-lg-3 v1">
+              <label for="x6"  style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Select-AC/NAC</label>
+            <select id="x6" name="usr"">
+              <option selected>AC</option>
+              <option>NON-AC</option>
+            </select>
+            </div>
+            <div class="ccol col-lg-3 col-lg-3">
+              <label for="ap" style="font-weight: bold; color:rgb(4, 42, 87); font-family: 'Raleway', sans-serif;">Set Price</label>
+              <input type="password" name="apass" id="ap" placeholder="Change your password">
+            </div>
+            <div class="ccol col-lg-3 col-lg-3">
+              <button type="submit" class="btn btn-primary btn-sm btn-hover" style="font-weight: bold;">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+   
+</body>
+<script>
+   
+  function dis(){
+    var p=document.querySelector(".alrt");
+    p.style.display="none";
+   
+  }
+  setInterval(dis,2000);
+
+  
+</script>
+</html>

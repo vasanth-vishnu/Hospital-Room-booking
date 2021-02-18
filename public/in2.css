@@ -1,0 +1,126 @@
+
+body{
+    margin: 0;
+    padding: 0;  
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.navbar{
+    background-color: rgb(58, 137, 228);
+    padding: 3px;
+    padding-left: 28px;
+    position: fixed;
+    z-index: 3000;
+    width: 100%;
+    
+}
+
+.nt{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+}
+.nt1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.b1{
+   
+    position: relative;
+    top:100px;
+}
+.th{
+    color: white;
+}
+.container h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.rd{
+   color: white;
+   background-color:  rgb(113, 178, 252);
+   text-align: center;
+}
+.rd h1{
+font-size: 35px;
+}
+
+input,label{
+    display: block;
+}
+label{
+    position: relative;
+    top:8px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color:rgb(4, 42, 87);
+    margin-top: 30px;
+}
+form{
+    padding: 0;
+}
+input{
+    width: 250px;
+    background-color: transparent;
+    color: rgb(58, 137, 228);
+    border: none;
+    border-bottom: 2px solid rgb(58, 137, 228);
+    outline: none;
+}
+::-webkit-input-placeholder{
+    color: rgb(58, 137, 228);
+}
+.headb{
+    background-color:rgb(58, 137, 228) ;
+    text-align: center;
+    width: 100%;
+    color: white;
+    height: 30px;
+}
+input[type=radio]{
+position: relative;
+top: 8px;
+width: 40px;
+}
+.bkbt{
+    background-color: rgb(58, 137, 228);
+    border-radius: 3px;
+    color: white;
+    border: none;
+    font-weight: bold;
+
+    outline: none;
+    position: relative;
+    left: 120px;
+    width: 270px;
+}
+.bkp{
+    color:rgb(4, 42, 87);
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.dw,.dw1{
+    display: inline;
+}
+.gr{
+    position: relative;
+    top:-25px;
+}
+.sec2{
+    height: 800px;
+}
+.vp{
+    background-color: rgba(232, 240, 250, 0.788);
+    height: 250px;
+    overflow: scroll;
+    width:530px;
+    padding:10px;
+}

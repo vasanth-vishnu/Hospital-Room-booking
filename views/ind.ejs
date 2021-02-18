@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Raleway:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="in2.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">
+      <table>
+        <tr>
+          <td>
+            <div class="divl"><img src="newlo.png" width="40px" height="38px"></div>
+          </td>
+          <td>
+            <div class="divt nt">Homels</div>
+          </td>
+        </tr>
+      </table>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nt1 nav-link" href="/home"  style="color: white;">Home</a>
+        </li>
+       
+      
+       
+      </ul>
+    </div>
+  </nav>
+    <div class="b1">
+      <div class="container">
+        <div class="rd" style="padding: 5px;"><h4>Room Booking</h4></div>
+        <h1>Room Details</h1>
+        <table class="table">
+          <thead>
+            <tr class="bg-primary th th1">
+              <th scope="col">Rooms</th>
+              <th scope="col">AC / NAC</th>
+              <th scope="col">Cost per room &#x20b9;</th>
+              <th scope="col">Available-rooms</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <% for(var i=0;i<tab.length;i++) { %>
+            <tr class="table-success th1">
+              <td><%= tab[i].Roomtype %></td>
+              <td><%= tab[i].Type %></td>
+              <td>&#x20b9;<%= tab[i].Price %></td>
+              <td><%= arr[i] %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+        <div class="sec2">
+          <div class="headb">
+            <h4>Book now</h4>
+          </div>
+          <form action="/user-booking" method="POST">
+            <table>
+              <tr>
+                <td>
+                  
+                    <label for="x2">First Name</label>
+                    <input type="text" id="x2" name="ufname" placeholder="enter the first-name">
+                  
+                </td>
+                <td>
+                  
+                    <label for="x3">last Name</label>
+                    <input id="x3" type="text" name="ulname" placeholder="enter the last-name">
+                  
+                </td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td>
+                  
+                  <label for="x1">Patient-Id</label>
+                  <input type="gmail" id="x1" name="upid" placeholder="patient-id">
+                  
+                </td>
+                <td>
+                  
+                    <label for="x9">Mobile</label>
+                    <input id="x9" type="text" name="umob" placeholder="enter the last-name">
+                  
+                </td>
+              </tr>
+            </table>
+            <label for="x17">Gmail</label>
+            <input type="Gmail" name="ugmail" id="x17" placeholder="enter your gmail" style="width:500px;">
+            <div class="vp">
+            <% for(var i=0;i<opt.length;i++) { %>
+              <h5 style="color: blue;"><%= opt[i].Roomtype %></h5>
+            <label for="x6">Select-room</label>
+            <select id="x6" name="usr<%= i+1 %>" style="width: 500px; height: 32px;">
+              <option selected>choose...</option>
+              <option><%= tab[i].Roomtype %></option>
+
+          </select>
+          
+            <table>
+              <tr>
+                <td>
+                  <label class="dw"for="x8">N-AC</label>
+                  <input class="dw1" type="radio" name="uac<%= i+1 %>" value="NON-AC" >
+                  
+                </td>
+                <td>
+                  <label class="dw" for="x8">AC</label>
+                  <input class="dw1" type="radio" name="uac<%= i+1 %>" value="AC" >
+                </td>
+              </tr>
+            </table>
+            <label for="x7">No of rooms (<%= tab[i].Roomtype %>)</label>
+                  <input type="number" id="x7" name="unfr<%= i+1 %>" placeholder="no of room" style="width:500px;">
+                  <% } %>
+            </div>
+            <label for="x17">Booking On</label>
+            <input type="text" name="bookd" value="<%= de %>" id="x17"  style="width:500px;">
+            <table>
+              <tr>
+                <td>
+                  <label for="x4">Check-In</label>
+                  <input type="date" name="uci" id="x4">
+                </td>
+                <td>
+                  <label for="x4">Check-Out</label>
+                  <input type="date" name="uco" id="x4">
+                </td>
+              </tr>
+            </table>
+            
+            <p class="bkp">generate receipt</p>
+            <table class="gr">
+              <tr>
+                <td>
+                  <label class="dw"for="x11">yes</label>
+                  <input class="dw1" type="radio" id="x11" name="us" value="yes" placeholder="enter your mail">
+                  
+                </td>
+                <td>
+                  <label class="dw" for="x12">no</label>
+                  <input class="dw1" type="radio" id="x12" name="us" value="no" placeholder="enter your mail">
+                </td>
+              </tr>
+            </table>
+            <button class="bkbt" type="submit">Book</button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  
+</body>
+</html>

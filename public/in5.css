@@ -1,0 +1,69 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    background-color: rgb(58, 137, 228);
+    padding: 3px;
+    padding-left: 28px;
+    position: fixed;
+    z-index: 3000;
+    width: 100%;
+}
+.nt{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+}
+.nt1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+.containr{
+    
+    position: relative;
+    top:80px;
+    padding: 20px;
+   
+}
+.container{
+    position: relative;
+    top:80px;
+}
+.rm{
+    background-color: white;
+    padding-bottom: 10px;
+}
+.row{
+    padding-left: 25px;
+ }
+ .ccol{
+     margin-top: 20px;
+ }
+ input{
+     width: 200px;
+     background-color: transparent;
+     color: rgb(10, 73, 146);
+     border: none;
+     border-bottom: 2px solid rgb(58, 137, 228);
+     outline: none;
+    
+ }
+ select{
+    width: 200px;
+    background-color: transparent;
+    color: rgb(10, 73, 146);
+    border: none;
+    border-bottom: 2px solid rgb(58, 137, 228);
+    outline: none;
+}
+::-webkit-input-placeholder{
+    opacity: 0.2;
+    font-weight: bolder;
+}
+input,label{
+    display: block;
+}

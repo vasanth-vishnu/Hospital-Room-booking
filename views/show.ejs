@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Raleway:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="in5.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+          <table>
+            <tr>
+              <td>
+                <div class="divl"><img src="newlo.png" width="40px" height="38px"></div>
+              </td>
+              <td>
+                <div class="divt nt">Homels</div>
+              </td>
+            </tr>
+          </table>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nt1 nav-link" href="/home"  style="color: white;">Home</a>
+            </li>
+           
+          
+           
+          </ul>
+        </div>
+      </nav>
+      
+    <div class="containr">
+     
+      <a href="admin-page1" class="btn btn-primary btn-hover tb1" style="text-decoration: none; color:white; font-weight: bold;">Back</a>
+      <div class="shl" style="float: right;">
+        <ul style="display: flex; list-style: none;">
+          <li style="position: relative; right: 20px;"><input style="border: 2px solid blue; border-radius: 5px; padding: 5px;" type="text" placeholder="search"></li>
+          <li><a href="admin-page1" class="btn btn-primary btn-hover tb1" style="text-decoration: none; color:white; font-weight: bold;">search</a></li>
+        </ul>
+      </div>
+      <br><br>
+
+        <table class="table table-hover table-blue">
+            <thead class="table-info">
+                <tr>
+                    <th>Name</th>
+                    <th>mobile</th>
+                    <th>Patient-Id</th>
+                    <th>Roomtype</th>
+                    <th>Type</th>
+                    <th>BookedOn</th>
+                    <th>Rooms number</th>
+                    <th>Check in date</th>
+                    <th>Check out date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="table-stripped ">
+                <% item.forEach(function(item){ %>
+                    <tr>
+                        <td><%= item.lname %></td>
+                        <td><%= item.mobile %></td>
+                        <td><%= item.pid %></td>
+                        <td><%= item.roomType %></td>
+                        <td><%= item.type %></td>
+                        <td><%= item.bookedOn %></td>
+                        <td><%= item.roomnum %></td>            
+                        <td><%= item.checkIn %></td>
+                        <td><%= item.checkOut %></td>
+                        <td>
+                            <a href="/update/<%= item.roomnum %>" class="btn btn-sm btn-primary">Extend</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                            <a href="/delete/<%= item.roomnum %>" class="btn btn-sm btn-danger">Cancel</a>
+                        </td>                                                   
+                    </tr>
+                    
+                <% }); %>
+            </tbody>         
+        </table>
+    </div>
+   
+</body>
+</html>
+
+
